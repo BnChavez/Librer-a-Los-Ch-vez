@@ -1,0 +1,160 @@
+/* ===== Estilos generales ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f7f9fc, #dce3f0);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Encabezado ===== */
+header {
+    background-color: #004aad;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0.5cm;
+    font-size: 2.5rem;
+}
+
+/* ===== Contenido principal ===== */
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    color: #004aad;
+}
+
+/* ===== Contenedor de redes ===== */
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+/* ===== Tarjeta de cada red ===== */
+.red {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    padding: 20px;
+    width: 220px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.red:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+/* ===== Imágenes de las redes ===== */
+.red img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* ✅ Diferentes estilos para cada imagen */
+.red img[alt="WhatsApp"] {
+    border-radius: 50%; /* Redonda */
+}
+
+.red img[alt="Correo Electrónico"] {
+    border-radius: 0%; /* Cuadrada, sin esquinas redondeadas */
+     width: 180px;
+     object-fit: contain;
+}
+
+/* ===== Botones/enlaces ===== */
+.red a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #004aad;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    font-weight: bold;
+}
+
+.red a:hover {
+    background-color: #0074e4;
+}
+
+/* ===== Texto final ===== */
+p {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 40px;
+}
+
+/* ===== 📱 Estilos Responsivos ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    .red {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .red img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .red img[alt="Correo Electrónico"] {
+        width: 130px;
+    }
+
+    .red a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .redes {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .red {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+
